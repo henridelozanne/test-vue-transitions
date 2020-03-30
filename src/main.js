@@ -9,6 +9,7 @@ import Simple from './components/Simple.vue';
 import Stagger from './components/Stagger.vue';
 import State from './components/State.vue';
 import Timeline from './components/Timeline.vue';
+import Master from './components/Master.vue';
 
 Vue.config.productionTip = false
 
@@ -21,6 +22,7 @@ const routes = [
   { path: '/stagger', component: Stagger },
   { path: '/state', component: State },
   { path: '/timeline', component: Timeline },
+  { path: '/master', component: Master },
 ]
 
 const router = new VueRouter({

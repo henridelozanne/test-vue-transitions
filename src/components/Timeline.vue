@@ -20,6 +20,8 @@ export default {
     // const tl = gsap.timeline({repeat: 2});
     // repeat 2 times with delay before next iteration
     // const tl = gsap.timeline({repeat: 2, repeatDelay: 1});
+    // repeat infinitely
+    // const tl = gsap.timeline({repeat: -1});
     tl.to('.first', { x: 1200, duration: 2, ease: 'expo.out' });
     // absolute positioning during timeline
     tl.to('.second', { x: 1200, duration: 2, ease: 'expo.out' }, .5);
