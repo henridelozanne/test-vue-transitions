@@ -7,6 +7,7 @@ import List from './components/List.vue';
 import Drawer from './components/Drawer.vue';
 import Simple from './components/Simple.vue';
 import Stagger from './components/Stagger.vue';
+import State from './components/State.vue';
 
 Vue.config.productionTip = false
 
@@ -16,7 +17,8 @@ const routes = [
   { path: '/list', component: List },
   { path: '/drawer', component: Drawer },
   { path: '/simple', component: Simple },
-  { path: '/stagger', component: Stagger }
+  { path: '/stagger', component: Stagger },
+  { path: '/state', component: State },
 ]
 
 const router = new VueRouter({

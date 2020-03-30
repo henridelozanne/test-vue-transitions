@@ -6,6 +6,7 @@
     <router-link class="link" to="/drawer">Drawer</router-link>
     <router-link class="link" to="/simple">Simple</router-link>
     <router-link class="link" to="/stagger">Stagger</router-link>
+    <router-link class="link" to="/state">State</router-link>
     <transition name="slide-fade" mode="out-in">
       <router-view class="view"></router-view>
     </transition>
