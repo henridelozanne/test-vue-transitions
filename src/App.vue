@@ -108,4 +108,8 @@ export default {
 .slide-up-enter-active {
   transition: all 0.5s ease;
 }
+
+.slide-up-move {
+  transition: transform 0.6s ease-out;
+}
 </style>
