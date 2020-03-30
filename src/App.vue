@@ -2,6 +2,7 @@
   <div id="app">
     <router-link class="link" to="/">Modal</router-link>
     <router-link class="link" to="/about">About</router-link>
+    <router-link class="link" to="/list">List</router-link>
     <transition name="slide-fade" mode="out-in">
       <router-view class="view"></router-view>
     </transition>
@@ -97,5 +98,14 @@ export default {
 .slide-fade-leave-to {
   opacity: 0;
   transform: translateX(-100px);
+}
+
+.slide-up-enter {
+  transform: translateY(15px);
+  opacity: 0;
+}
+
+.slide-up-enter-active {
+  transition: all 0.5s ease;
 }
 </style>
