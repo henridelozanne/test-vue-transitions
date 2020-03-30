@@ -5,6 +5,8 @@ import Modal from './components/Modal.vue';
 import About from './components/About.vue';
 import List from './components/List.vue';
 import Drawer from './components/Drawer.vue';
+import Simple from './components/Simple.vue';
+import Stagger from './components/Stagger.vue';
 
 Vue.config.productionTip = false
 
@@ -12,7 +14,9 @@ const routes = [
   { path: '/', component: Modal },
   { path: '/about', component: About },
   { path: '/list', component: List },
-  { path: '/drawer', component: Drawer }
+  { path: '/drawer', component: Drawer },
+  { path: '/simple', component: Simple },
+  { path: '/stagger', component: Stagger }
 ]
 
 const router = new VueRouter({
