@@ -1,13 +1,9 @@
 <template>
   <div id="app">
-    <button class="button" @click="toggleModal">Launch modal</button>
-    <transition name="fade">
-      <div v-if="modalVisible" class="modal">
-        <div class="modal-content">
-          Modal component
-          <button class="button quit-button" @click="toggleModal">Quit modal</button>
-        </div>
-      </div>
+    <router-link class="link" to="/">Modal</router-link>
+    <router-link class="link" to="/about">About</router-link>
+    <transition name="slide-fade" mode="out-in">
+      <router-view class="view"></router-view>
     </transition>
   </div>
 </template>
@@ -15,16 +11,6 @@
 <script>
 export default {
   name: 'App',
-  data() {
-    return {
-      modalVisible: false,
-    };
-  },
-  methods: {
-    toggleModal() {
-      this.modalVisible = !this.modalVisible;
-    },
-  },
 }
 </script>
 
@@ -76,6 +62,15 @@ export default {
   }
 }
 
+.link:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.view {
+  margin-top: 30px;
+}
+
+/* TRANSITIONS */
 .fade-enter {
   opacity: 0;
 }
@@ -87,5 +82,20 @@ export default {
 
 .fade-leave-to {
   opacity: 0;
+}
+
+.slide-fade-enter {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.5s ease;
+}
+
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateX(-100px);
 }
 </style>
