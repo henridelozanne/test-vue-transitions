@@ -8,6 +8,7 @@ import Drawer from './components/Drawer.vue';
 import Simple from './components/Simple.vue';
 import Stagger from './components/Stagger.vue';
 import State from './components/State.vue';
+import Timeline from './components/Timeline.vue';
 
 Vue.config.productionTip = false
 
@@ -19,6 +20,7 @@ const routes = [
   { path: '/simple', component: Simple },
   { path: '/stagger', component: Stagger },
   { path: '/state', component: State },
+  { path: '/timeline', component: Timeline },
 ]
 
 const router = new VueRouter({
