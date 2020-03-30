@@ -1,8 +1,8 @@
 <template>
     <div>
-        <input type="text" v-model="newContact" placeholder="Name"/>
-        <button @click="addContact">Add contact</button>
-        <button @click="sortContacts">Sort contacts</button>
+        <input type="text" v-model="newContact" placeholder="Name" class="input" />
+        <button @click="addContact" class="button">Add contact</button>
+        <button @click="sortContacts" class="button">Sort contacts</button>
         <transition-group name="slide-up" tag="ul" appear>
             <li v-for="contact in contacts" :key="contact">{{contact}}</li>
         </transition-group>
@@ -33,5 +33,9 @@ export default {
 <style scoped>
     ul {
         list-style-type: none;
+    }
+
+    input {
+        margin-right: 30px;
     }
 </style>
